@@ -10,3 +10,12 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+.rec {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
