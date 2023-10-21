@@ -9,9 +9,9 @@
 body {
   margin: 0 auto;
   background-color: var(--background);
-  max-width: calc(1024px + 20px);
+  max-width: calc(1440px + 20px);
   padding: 10px;
-  font-family: var(--font-main), "sans-serif";
+  font-family: var(--font-main), monospace;
   font-size: 18px;
 }
 
@@ -70,9 +70,4 @@ main {
 footer {
   margin-top: 48px;
   position: relative;
-}
-
-.light {
-  fill: var(--text-main-accent);
-  filter: drop-shadow(0px 0px 4px var(--text-main-accent));
 }

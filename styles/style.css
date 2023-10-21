@@ -4,16 +4,13 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
-.background {
-  position: relative;
-}
-.background::before {
+body::before {
   content: "";
   position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
   background: url(../images/cover-image-dark.png) no-repeat center / cover;
   z-index: -1;
 }
@@ -30,62 +27,79 @@
   top: 65px;
   right: 0;
 }
+
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .header__theme-menu-button {
   min-height: 26px;
   padding: 0 13px;
   border: 1px solid transparent;
   outline: none;
+  text-transform: capitalize;
 }
+
 .header__theme-menu-button:hover {
   border: 1px solid rgba(var(--label-main-accent-rgb), 0.4);
   cursor: pointer;
 }
+
 .header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--label-main-accent);
 }
+
 .header__theme-menu-button_active {
   border-color: var(--label-main-accent);
+  pointer-events: none;
 }
+
 .title {
   color: var(--accent-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 82.5%;
 }
+
 .title-decor {
   text-shadow: 4px 4px 0 var(--text-main-accent);
 }
+
 .link-decor {
   outline: none;
   text-shadow: 2px 2px 0 var(--text-main-accent);
 }
+
 .link-decor:hover {
   border-bottom: 1px solid var(--label-main-accent);
 }
+
 .link-decor:focus-visible {
   outline: 1px solid var(--text-main);
 }
+
 .text {
   color: var(--text-main);
   line-height: 130%;
 }
+
 .label {
   color: var(--label-main-accent);
   font-weight: 700;
   line-height: 130%;
 }
+
 .label-lite {
   font-weight: 400;
 }
+
 .label-decor {
   color: var(--label-main);
   background: var(--text-main-accent);
 }
+
 .theme_light.label-decor {
   color: var(--text-main);
 }
@@ -117,11 +131,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 648px;
+  height: 100lvh;
 }
+
 .header__angles {
   align-items: start;
 }
+
 .angles::before {
   content: "";
   position: absolute;
@@ -132,6 +148,7 @@
   width: 25px;
   height: 25px;
 }
+
 .angles::after {
   content: "";
   position: absolute;
@@ -142,82 +159,105 @@
   width: 25px;
   height: 25px;
 }
+
 .header__main {
   position: relative;
   width: 100%;
 }
+
 .header__description {
   position: absolute;
   margin-top: 56px;
 }
+
 .section__images {
   gap: 6px;
+}
+
+.rec {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  text-transform: uppercase;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+
+.rec::after {
+  content: url("../images/iconRec.svg");
+  width: 21px;
+  height: 21px;
+  fill: var(--text-main-accent);
+  filter: drop-shadow(0px 0px 4px var(--text-main-accent));
 }
 
 @media (min-width: 767.97px) {
   .section__images {
     gap: 20px;
   }
+
   body {
     padding: 20px;
   }
+
   header {
     margin-bottom: 80px;
   }
+
   main {
     gap: 80px;
   }
+
   footer {
     margin-top: 80px;
   }
+
   .header__theme-menu {
     top: 172px;
   }
+
   .laptop-row {
     display: grid;
     grid-template-columns: 236px 1fr;
   }
+
   .images-list {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 192px 230px 318px;
     gap: 20px;
   }
+
   .grid-column {
     grid-column: span 2 / span 2;
   }
+
   .grid-row {
     grid-row: span 2 / span 2;
   }
-  .angles {
-    height: 984px;
-  }
+
   .header__description {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-top: 163px;
   }
+
   .header__description-content {
     grid-column-start: 2;
   }
-  .background::before {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
-    background: url(../images/cover-image-dark.png) no-repeat center / cover;
-    z-index: -1;
-  }
+
   .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
+
   .header__title {
     margin-left: -20px;
   }
+
   img {
     object-fit: cover;
   }
+
   .laptop-middle > h2 {
     max-width: 130px;
   }
@@ -230,25 +270,28 @@
     transform: translate(-50%, 0);
     width: fit-content;
   }
+
   .header__theme-menu-list {
     flex-direction: row;
     justify-content: center;
   }
+
   .laptop-row {
     grid-template-columns: 315px 1fr;
   }
+
   .list-row {
     grid-template-columns: repeat(3, 1fr);
   }
-  .angles {
-    height: 728px;
-  }
+
   .header__description {
     margin-top: 115px;
   }
+
   .laptop-middle > h2 {
     max-width: 315px;
   }
+
   .images-list {
     grid-template-rows: 260px 315px 428px;
     column-gap: 20.5px;

@@ -17,12 +17,46 @@
   --label-main-accent-rgb: 53, 52, 48;
   --background: #fff1f7;
   --accent-color: #ffc2e6;
+  --shadow-accent: #ff0070;
 }
 
 .page.theme_light .rec {
   display: none;
 }
 
-.page.theme_light .background::before {
+.page.theme_light::before {
   background: url(../images/cover-image-light.png) no-repeat center / cover;
+}
+
+@media (min-width: 1023.97px) {
+  .page.theme_light .title-decor {
+    text-shadow: 2px 2px 0px var(--shadow-accent);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-main: #353430;
+    --text-main-accent: #ff8dcb;
+    --label-main: #353430;
+    --label-main-accent: #353430;
+    --label-main-accent-rgb: 53, 52, 48;
+    --background: #fff1f7;
+    --accent-color: #ffc2e6;
+    --shadow-accent: #ff0070;
+  }
+
+  .rec {
+    display: none;
+  }
+
+  body::before {
+    background: url(../images/cover-image-light.png) no-repeat center / cover;
+  }
+
+  @media (min-width: 1023.97px) {
+    .title-decor {
+      text-shadow: 2px 2px 0px var(--shadow-accent);
+    }
+  }
 }
