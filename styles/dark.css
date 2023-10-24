@@ -23,6 +23,7 @@
   display: flex;
 }
 
-.page.theme_dark::before {
+.page.theme_dark {
   background: url(../images/cover-image-dark.png) no-repeat center / cover;
+  background-attachment: fixed;
 }

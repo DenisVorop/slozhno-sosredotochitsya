@@ -24,8 +24,9 @@
   display: none;
 }
 
-.page.theme_light::before {
+.page.theme_light {
   background: url(../images/cover-image-light.png) no-repeat center / cover;
+  background-attachment: fixed;
 }
 
 @media (min-width: 1023.97px) {
@@ -50,8 +51,9 @@
     display: none;
   }
 
-  body::before {
+  body {
     background: url(../images/cover-image-light.png) no-repeat center / cover;
+    background-attachment: fixed;
   }
 
   @media (min-width: 1023.97px) {
